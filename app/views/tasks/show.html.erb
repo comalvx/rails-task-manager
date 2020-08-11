@@ -1,0 +1,11 @@
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+
+<%= link_to "Edit task", edit_path(params[:id])  %>
+<%= link_to "Delete task",
+    task_path(@task),
+    method: :delete,
+    dat: {confirm: "Are you sure?"}
+%>
+
+<%= link_to "List all tasks", index_path %>
